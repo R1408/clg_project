@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>project1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Data_connection</display-name>
+    <servlet-name>Data_connection</servlet-name>
+    <servlet-class>com.Data_connection.Data_connection</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Data_connection</servlet-name>
+    <url-pattern>/insert.php</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Admin_DataConnection</display-name>
+    <servlet-name>Admin_DataConnection</servlet-name>
+    <servlet-class>com.Data_connection.Admin_DataConnection</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Admin_DataConnection</servlet-name>
+    <url-pattern>/admin_insert.php</url-pattern>
+  </servlet-mapping>
+ <!--  
+  <context-param>
+    <description>Location to store uploaded file</description>
+    <param-name>file-upload</param-name>
+    <param-value>
+      Ait-image\
+   </param-value>
+  </context-param>
+  -->
+  <servlet>
+    <description></description>
+    <display-name>UploadFileSer</display-name>
+    <servlet-name>UploadFileSer</servlet-name>
+    <servlet-class>com.Data_connection.UploadFileSer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadFileSer</servlet-name>
+    <url-pattern>/admin_Image.php</url-pattern>
+  </servlet-mapping>
+</web-app>
